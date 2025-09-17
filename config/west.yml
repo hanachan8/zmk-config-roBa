@@ -1,16 +1,12 @@
+# config/west.yml
 manifest:
-remotes:
-- name: zmkfirmware
-url-base: https://github.com/zmkfirmware
-- name: kot149
-url-base: https://github.com/kot149
-projects:
-- name: zmk
-remote: zmkfirmware
-revision: main
-import: app/west.yml
-- name: zmk-mouse-gesture
-remote: kot149
-revision: main
-self:
-path: config
+  projects:
+    - name: zmk
+      url: https://github.com/zmkfirmware/zmk
+      revision: main
+      import: app/west.yml
+    - name: zmk-mouse-gesture
+      url: https://github.com/kot149/zmk-mouse-gesture
+      revision: main
+  self:
+    path: config
