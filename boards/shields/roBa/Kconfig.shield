@@ -1,5 +1,22 @@
-config SHIELD_ROBA_R
-    def_bool $(shields_list_contains,roBa_R)
+if SHIELD_ROBA_R
 
-config SHIELD_ROBA_L
-    def_bool $(shields_list_contains,roBa_L)
+    config ZMK_KEYBOARD_NAME
+        default "roBa_R"
+
+    config ZMK_SPLIT
+        default y
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_ROBA_L
+
+    config ZMK_KEYBOARD_NAME
+        default "roBa_L"
+
+    config ZMK_SPLIT
+        default y
+
+endif
