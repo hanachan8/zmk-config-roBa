@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ℤMK_POINTING_DEFAULT_SCRL_VAL 30
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -80,7 +81,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <25>;
+            tap-ms = <100>;
         };
 
         td_lang: td_lang {
