@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
 #define ZMK_POINTING_DEFAULT_SCRL_TIME_TO_MAX_SPEED_MS 180
 #define ZMK_POINTING_DEFAULT_SCRL_ACCELERATION_EXPONENT 2
 
@@ -84,7 +84,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-            tap-ms = <40>;
+            tap-ms = <100>;
         };
 
         td_lang: td_lang {
