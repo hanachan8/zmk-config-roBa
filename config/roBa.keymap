@@ -76,18 +76,20 @@
         };
 
          encoder_msc_down_up: encoder_msc_down_up {
-              compatible = "zmk,behavior-sensor-rotate";
-              label = "ENCODER_MSC_DOWN_UP";
-              #sensor-binding-cells = <0>;
-              bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-              tap-ms = <20>;
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
         };
 
-　　　　　td_lng: td_language2_1 {
-         　   compatible = "zmk,behavior-tap-dance";
-    　        #binding-cells = <0>;
-              tapping-term-ms = <250>;
-              bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+ 　　&behaviors {
+        td_lang: td_lang {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+            };
         };
     };
 
