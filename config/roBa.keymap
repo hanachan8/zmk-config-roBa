@@ -3,7 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
+#define ZMK_POINTING_DEFAULT_SCRL_TIME_TO_MAX_SPEED_MS 180
+#define ZMK_POINTING_DEFAULT_SCRL_ACCELERATION_EXPONENT 2 
 
 &mt {
     flavor = "balanced";
