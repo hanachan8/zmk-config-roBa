@@ -96,7 +96,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                                                         &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&mt LEFT_ALT Q    &kp W         &kp E         &kp R                 &kp T                                                         &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
 &kp A             &kp S         &kp D         &kp F                 &kp G                   &trans         &kp ESCAPE             &kp H        &kp J  &kp K      &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp MINUS      &to_layer_0 RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 TAB  &lt_to_layer_0 1 SPACE  &td_lang       &kp BACKSPACE          &lt 2 ENTER                             &kp DEL
@@ -110,7 +110,7 @@
 &kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT DOLLAR
 &kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL SEMICOLON
 &kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT SLASH
-&trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &kp PIPE
+&trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &kp EXCL
             >;
         };
 
