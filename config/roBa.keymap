@@ -82,11 +82,12 @@
               bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
               tap-ms = <20>;
         };
+
 　　　　　td_lng: td_language2_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+         　   compatible = "zmk,behavior-tap-dance";
+    　        #binding-cells = <0>;
+              tapping-term-ms = <250>;
+              bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
         };
     };
 
