@@ -120,7 +120,7 @@
 
 &spi0 {
     status = "okay";
-
+    compatible = "pixart,pmw3610";
     trackball: trackball@0 {
         status = "okay";
         reg = <0>;
