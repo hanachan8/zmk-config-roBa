@@ -50,8 +50,8 @@
         };
 
         eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+            bindings = <&kp EXCL>;
+            key-positions = <32 33>;
         };
     };
 
@@ -72,15 +72,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&mkp SCRL_DOWN>, <&mkp SCRL_UP>;
-
-            tap-ms = <40>;
         };
 
         td_lang: td_lang {
