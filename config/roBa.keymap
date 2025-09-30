@@ -49,6 +49,11 @@
             key-positions = <20 21>;
         };
 
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <23 24>;
+        };
+
         excl {
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
@@ -74,7 +79,7 @@
             tapping-term-ms = <200>;
         };
 
-        td_lang: td_lang {
+        td_lang: td_language2_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
