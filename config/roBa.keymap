@@ -51,7 +51,7 @@
 
         excl {
             bindings = <&kp EXCL>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
         };
     };
 
@@ -92,8 +92,6 @@
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp MINUS      &to_layer_0 RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 TAB  &lt_to_layer_0 1 SPACE  &td_lang       &kp BACKSPACE          &lt 2 ENTER                             &kp DEL
             >;
-
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         FUNCTION {
@@ -104,7 +102,6 @@
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &kp EXCL
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         NUM {
@@ -123,8 +120,6 @@
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_UP>;
         };
 
         MOUSE {
@@ -135,7 +130,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SCROLL {
