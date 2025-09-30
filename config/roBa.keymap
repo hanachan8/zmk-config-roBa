@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -97,13 +96,13 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &kp E         &kp R                 &kp T                                                         &kp Y        &kp U  &kp I      &lt 5 O  &mt RIGHT_ALT P
+&mt LEFT_ALT Q    &kp W         &lt 5 E       &kp R                 &kp T                                                         &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
 &kp A             &kp S         &kp D         &kp F                 &kp G                   &trans         &kp ESCAPE             &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B                   &kp MINUS      &to_layer_0 RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 TAB  &lt_to_layer_0 1 SPACE  &td_lang       &kp BACKSPACE          &lt 2 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         FUNCTION {
@@ -113,6 +112,8 @@
 &kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT SLASH
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &kp EXCL
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
@@ -132,7 +133,7 @@
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_UP>;
         };
 
         MOUSE {
@@ -142,6 +143,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SCROLL {
