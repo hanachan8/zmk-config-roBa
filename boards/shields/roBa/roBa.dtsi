@@ -114,7 +114,7 @@
 
     trackball_listener: trackball_listener {
         compatible = "zip_temp_layer";
-        
+        status = "disabled";
         input-processors = <&zip_temp_layer 5 10000>;
     };
 };
