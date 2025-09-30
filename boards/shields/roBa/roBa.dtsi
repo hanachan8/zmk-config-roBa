@@ -114,15 +114,15 @@
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "okay";
+        status = "disabled";
     };
 };
 
 &spi0 {
-    status = "okay";
+    status = "disabled";
     compatible = "pixart,pmw3610";
     trackball: trackball@0 {
-        status = "okay";
+        status = "disabled";
         reg = <0>;
     };
 };
