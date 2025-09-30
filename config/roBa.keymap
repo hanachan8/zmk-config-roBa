@@ -109,7 +109,7 @@
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &kp EXCL
             >;
 
-            sensor-bindings = <&inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
