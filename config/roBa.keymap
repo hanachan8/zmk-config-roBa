@@ -41,7 +41,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <19 20>;
+            key-positions = <18 19>;
         };
 
         double_quotation {
@@ -51,7 +51,7 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <23 24>;
+            key-positions = <25 26>;
         };
 
         excl {
