@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -29,6 +31,11 @@
     combos {
         compatible = "zmk,combos";
 
+            escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
+
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
@@ -39,6 +46,11 @@
             key-positions = <12 13>;
         };
 
+            percent {
+            bindings = <&kp PRCNT>;
+            key-positions = <14 15>;
+        };
+
         minus {
             bindings = <&kp MINUS>;
             key-positions = <18 19>;
@@ -47,6 +59,11 @@
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
+        };
+
+        capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <22 23>;
         };
 
         equal {
@@ -77,6 +94,16 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <100>;
         };
 
         td_lang: td_language2_1 {
