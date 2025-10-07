@@ -27,7 +27,7 @@
 
          slow_on_arrow {
             layers = <3>;
-            input-processors = <&zip_xy_scaler 1 2>;
+            input-processors = <&zip_xy_scaler 1 4>;
         };
 
         scroll_boost {
