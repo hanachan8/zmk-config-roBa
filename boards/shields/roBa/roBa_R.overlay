@@ -20,16 +20,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        fn_slowdown {
-            layers = <2>;
-            input-processors = <&zip_xy_scaler 1 1>;
-       };
-
-         slow_on_arrow {
-            layers = <4>;
-            input-processors = <&zip_xy_scaler 1 4>;
-        };
-
         scroll_boost {
             layers = <5>;
             input-processors = <&zip_scroll_scaler 3 1>;
