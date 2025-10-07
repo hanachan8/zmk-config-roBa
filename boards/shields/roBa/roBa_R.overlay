@@ -30,11 +30,6 @@
             input-processors = <&zip_xy_scaler 1 2>;
         };
 
-        scroll_boost {
-            layers = <5>;
-            input-processors = <&zip_scroll_scaler 3 2>;
-        };
-
         fast_on_mouse {
             layers = <4>;
             input-processors = <&zip_xy_scaler 2 1>;
