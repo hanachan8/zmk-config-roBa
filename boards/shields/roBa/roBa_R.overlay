@@ -22,7 +22,7 @@
 
          speed_half {
             layers = <7>;
-            input-processors = <&zip_xy_scaler 1 2 &zip_scroll_scaler 1 2>;
+            input-processors = <&zip_xy_scaler 1 2>;
         };
 
         scroll_boost {
