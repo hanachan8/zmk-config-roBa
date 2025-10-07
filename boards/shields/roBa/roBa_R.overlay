@@ -21,12 +21,12 @@
         device = <&trackball>;
 
         fn_slowdown {
-            layers = <1>;
+            layers = <2>;
             input-processors = <&zip_xy_scaler 1 1>;
        };
 
          slow_on_arrow {
-            layers = <3>;
+            layers = <4>;
             input-processors = <&zip_xy_scaler 1 4>;
         };
 
@@ -36,7 +36,7 @@
         };
 
         fast_on_mouse {
-            layers = <4>;
+            layers = <1>;
             input-processors = <&zip_xy_scaler 2 1>;
         };
 
