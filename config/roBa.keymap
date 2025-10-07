@@ -121,9 +121,20 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 5 E       &kp R     &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &lt 3 F   &kp G                   &trans                    &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
+&mt LCTRL A       &kp S         &kp D         &lt 4 F   &kp G                   &trans                    &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B                   &lt 6 MINUS               &kp RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 4 TAB      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -157,17 +168,6 @@
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
