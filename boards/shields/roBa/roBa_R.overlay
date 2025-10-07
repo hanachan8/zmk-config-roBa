@@ -19,6 +19,22 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        fast_on_mouse {
+            layers = <4>;
+            input-processors = <&zip_xy_scaler 2 1>;
+        };
+
+        slow_on_arrow {
+            layers = <3>;
+            input-processors = <&zip_xy_scaler 1 2>;
+        };
+
+        scroll_boost {
+            layers = <5>;
+            input-processors = <&zip_scroll_scaler 3 2>;
+        };
+
     };
 };
 
