@@ -128,6 +128,15 @@
             tapping-term-ms = <250>;
             bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
         };
+
+        td_q_escape: td_q_escape {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp Q>, <&kp EXSEL>;
+
+            label = "TD_Q_ESCAPE";
+        };
     };
 
     keymap {
@@ -135,10 +144,10 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &lt 5 E       &kp R     &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &kp F     &kp G        &trans           &kp ESCAPE                 &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &kp RIGHT_WIN              &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 2 SPACE  &lt 4 TAB        &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                             &kp DEL
+&mt LEFT_ALT Q    &kp W         &lt 5 E       &kp R     &kp T                                        &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
+&mt LCTRL A       &kp S         &kp D         &kp F     &kp G        &trans           &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &kp RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 2 SPACE  &lt 4 TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -146,7 +155,7 @@
 
         MOUSE {
             bindings = <
-&mo 1   &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 7
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
@@ -168,10 +177,10 @@
 
         NUM {
             bindings = <
-&kp KP_PLUS                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp C_AC_ZOOM_IN   &kp HOME        &kp UP_ARROW    &kp END          &trans
-&kp KP_ASTERISK             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp C_AC_ZOOM_OUT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &trans             &trans          &trans          &trans           &trans
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                              &trans
+&kp KP_PLUS                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp RC(PLUS)   &kp HOME        &kp UP_ARROW    &kp END          &trans
+&kp KP_ASTERISK             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp RC(MINUS)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &trans         &trans          &trans          &trans           &trans
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -179,10 +188,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp RC(PLUS)   &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp RC(MINUS)  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans         &trans  &trans  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
