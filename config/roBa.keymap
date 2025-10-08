@@ -77,6 +77,21 @@
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
         };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <23 24>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <24 25>;
+        };
+
+        peast {
+            bindings = <&kp LC(V)>;
+            key-positions = <26 24>;
+        };
     };
 
     macros {
