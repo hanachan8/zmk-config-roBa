@@ -103,23 +103,22 @@
         };
 
     zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&macro_press &kp LCTRL>,
-                 <&macro_tap   &msc SCRL_UP>,
-                 <&macro_release &kp LCTRL>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>,
+                       <&macro_tap   &msc SCRL_UP>,
+                       <&macro_release &kp LCTRL>;
         };
 
     zoom_out_ctrl_wheel: zoom_out_ctrl_wheel {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&macro_press &kp LCTRL>,
-                 <&macro_tap   &msc SCRL_DOWN>,
-                 <&macro_release &kp LCTRL>;
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             bindings = <&macro_press &kp LCTRL>,
+                        <&macro_tap   &msc SCRL_DOWN>,
+                        <&macro_release &kp LCTRL>;
         };
-    };
 
- };
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
