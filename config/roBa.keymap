@@ -63,8 +63,8 @@
             key-positions = <20 21>;
         };
 
-        capslock {
-            bindings = <&kp CAPSLOCK>;
+        ctrlz {
+            bindings = <&kp LC(Z)>;
             key-positions = <22 23>;
         };
 
@@ -102,22 +102,29 @@
             label = "TO_LAYER_0";
         };
 
-    zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
+        zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>,
-                       <&macro_tap   &msc SCRL_UP>,
-                       <&macro_release &kp LCTRL>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&msc SCRL_UP>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
 
-    zoom_out_ctrl_wheel: zoom_out_ctrl_wheel {
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             bindings = <&macro_press &kp LCTRL>,
-                        <&macro_tap   &msc SCRL_DOWN>,
-                        <&macro_release &kp LCTRL>;
+        zoom_out_ctrl_wheel: zoom_out_ctrl_wheel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&msc SCRL_DOWN>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
-
     };
 
     behaviors {
@@ -194,10 +201,10 @@
 
         NUM {
             bindings = <
-&kp KP_PLUS                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp RC(PLUS)         &kp HOME        &kp UP_ARROW    &kp END          &trans
-&kp KP_ASTERISK             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp RC(MINUS)        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp RC(KP_NUMBER_0)  &trans          &trans          &trans           &trans
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                &trans
+&kp KP_PLUS                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &zoom_in_ctrl_wheel   &kp HOME        &kp UP_ARROW    &kp END          &trans
+&kp KP_ASTERISK             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &zoom_out_ctrl_wheel  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &trans                &trans          &trans          &trans           &trans
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -205,10 +212,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp RC(PLUS)         &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp RC(MINUS)        &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp RC(KP_NUMBER_0)  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                       &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &zoom_in_ctrl_wheel   &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &zoom_out_ctrl_wheel  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans                &trans  &trans  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                        &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
