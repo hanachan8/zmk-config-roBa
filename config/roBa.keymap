@@ -191,7 +191,7 @@
             >;
         };
 
-        SPEED {
+        HALF_SPEED {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
