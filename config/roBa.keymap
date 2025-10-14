@@ -168,19 +168,28 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &lt 5 E       &kp R     &kp T                                        &kp Y        &kp U  &lt 5 I    &kp O    &mt RIGHT_ALT P
+&mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                        &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D         &kp F     &kp G        &trans           &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &mt RCTRL SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &kp RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 2 SPACE  &lt 4 TAB        &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 7 MINUS      &kp RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 3 SPACE  &lt 5 TAB        &kp BACKSPACE  &lt 4 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
+        HALF_SPEED {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 7
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mo 1
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
@@ -223,7 +232,7 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &mo 7   &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &mo 1   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
@@ -236,15 +245,6 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        HALF_SPEED {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
