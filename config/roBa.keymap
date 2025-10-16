@@ -23,7 +23,7 @@
             <&kp UP_ARROW>,
             <&kp DOWN_ARROW>;
 
-        tick = <10>;
+        tick = <20>;
         wait-ms = <5>;
         tap-ms = <5>;
     };
@@ -142,7 +142,6 @@
             label = "ENCODER_MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
             tap-ms = <100>;
         };
 
@@ -158,7 +157,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp Q>, <&kp EXSEL>;
-
             label = "TD_Q_ESCAPE";
         };
     };
