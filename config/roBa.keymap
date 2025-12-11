@@ -170,7 +170,7 @@
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D         &lt 1 F   &kp G        &trans           &mt RCTRL ESCAPE  &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 7 MINUS      &kp RIGHT_WIN     &kp N        &kp M  &kp COMMA  &kp DOT  &mt SLASH RIGHT_SHIFT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 7 MINUS      &kp RIGHT_WIN     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 3 SPACE  &lt 5 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DEL
             >;
 
