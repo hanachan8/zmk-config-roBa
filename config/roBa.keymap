@@ -1,9 +1,9 @@
 #include <input/processors.dtsi>
+#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
@@ -18,13 +18,9 @@
     >;
 };
 
-&trackball_listener {
-    input-processors = <&zip_temp_layer 2 10000>;
-};
+&trackball_listener { input-processors = <&zip_temp_layer 2 10000>; };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 2 250>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
 
 &mt {
     flavor = "balanced";
@@ -188,9 +184,9 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &lt 1 F   &kp G        &trans           &mt RCTRL ESCAPE  &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&mt LCTRL A       &kp S         &kp D         &kp F     &kp G        &trans           &mt RCTRL ESCAPE  &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 7 MINUS      &kp RIGHT_WIN     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 3 SPACE  &lt 5 TAB        &kp BACKSPACE     &lt 4 ENTER                             &to 2
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &td_lang  &lt 3 SPACE  &lt 5 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
