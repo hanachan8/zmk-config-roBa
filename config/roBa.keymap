@@ -225,10 +225,10 @@
 
         NUM {
             bindings = <
-&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &zoom_in_ctrl_wheel   &trans          &kp UP_ARROW    &trans           &mt RIGHT_ALT PERCENT
-&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &zoom_out_ctrl_wheel  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RCTRL COLON
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &trans                &trans          &trans          &trans           &trans
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                 &trans
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &trans  &kp TILDE       &kp UP_ARROW          &trans                 &mt RIGHT_ALT PERCENT
+&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW        &kp RIGHT_ARROW        &mt RCTRL COLON
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp MINUS                    &trans  &trans  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
