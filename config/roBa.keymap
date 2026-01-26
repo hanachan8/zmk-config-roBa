@@ -12,6 +12,7 @@
     excluded-positions = <
         18 // J
         19 // K
+        20 // L
         21 // ;
         34 // Ctrl
     >;
@@ -22,7 +23,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 2 10000>;
+    input-processors = <&zip_temp_layer 2 250>;
 };
 
 &mt {
