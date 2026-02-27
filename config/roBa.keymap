@@ -48,24 +48,9 @@
     combos {
         compatible = "zmk,combos";
 
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
         percent {
             bindings = <&kp PRCNT>;
             key-positions = <14 15>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        ctrlz {
-            bindings = <&kp LC(Z)>;
-            key-positions = <22 23>;
         };
 
         equal {
@@ -76,21 +61,6 @@
         excl {
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <23 24>;
-        };
-
-        copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <24 25>;
-        };
-
-        peast {
-            bindings = <&kp LC(V)>;
-            key-positions = <26 25>;
         };
     };
 
@@ -168,10 +138,10 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                          &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &lt 1 F   &kp G        &trans             &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &mt RCTRL APOS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 5 MINUS        &kp RIGHT_WIN  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 3 SPACE  &mt LCTRL TAB      &kp BACKSPACE  &lt 4 ENTER                             &kp DEL
+&mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
+&mt LCTRL A       &kp S         &kp D         &lt 1 F   &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &mt RCTRL APOS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 5 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 3 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -189,8 +159,8 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &mo 1   &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &mkp MB4  &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
@@ -200,8 +170,8 @@
         FUNCTION {
             bindings = <
 &kp LEFT_ALT  &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT DOLLAR
-&kp LSHIFT    &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt LEFT_SHIFT SEMICOLON
-&kp RCTRL     &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RCTRL SLASH
+&trans        &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL SEMICOLON
+&trans        &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
 &trans        &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
 
@@ -210,10 +180,10 @@
 
         NUM {
             bindings = <
-&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &trans  &kp TILDE       &kp UP_ARROW          &trans                 &mt RIGHT_ALT PERCENT
-&mt LEFT_SHIFT KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW        &kp RIGHT_ARROW        &mt RIGHT_SHIFT COLON
-&mt LCTRL KP_NUMBER_0       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp MINUS                    &trans  &trans  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RCTRL
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                               &trans
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp PAGE_UP    &none           &kp UP_ARROW    &none            &mt RIGHT_ALT PERCENT
+&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp HOME       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RCTRL COLON
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp PAGE_DOWN  &none           &none           &none            &kp RIGHT_SHIFT
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
