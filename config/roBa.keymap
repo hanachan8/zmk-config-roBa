@@ -62,6 +62,11 @@
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
         };
+
+        test {
+            bindings = <&none>;
+            key-positions = <7 31 30>;
+        };
     };
 
     macros {
