@@ -66,8 +66,8 @@
         };
 
         test {
-            bindings = <&none>;
-            key-positions = <7 31 39 32>;
+            bindings = <&mkp MB3>;
+            key-positions = <19 20>;
         };
     };
 
