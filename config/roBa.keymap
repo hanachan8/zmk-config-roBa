@@ -7,7 +7,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <500>;
     excluded-positions = <
         18 // J
         19 // K
@@ -19,13 +19,13 @@
 
 &trackball_listener {
     input-processors = <
-        &zip_temp_layer 2 1000
+        &zip_temp_layer 2 10000
     >;
 };
 
 &mkp_input_listener { 
     input-processors = <
-        &zip_temp_layer 2 250
+        &zip_temp_layer 2 2500
     >;
 };
 
