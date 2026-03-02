@@ -19,11 +19,15 @@
 
 &trackball_listener {
     input-processors = <
-        &zip_temp_layer 2 500
+        &zip_temp_layer 2 1000
     >;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 2 250>; };
+&mkp_input_listener { 
+    input-processors = <
+        &zip_temp_layer 2 250
+    >;
+};
 
 &mt {
     flavor = "balanced";
