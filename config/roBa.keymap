@@ -23,7 +23,7 @@
     >;
 };
 
-&mkp_input_listener { 
+&mkp_input_listener {
     input-processors = <
         &zip_temp_layer 2 250
     >;
@@ -151,9 +151,9 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 7 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 6 APOS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 5 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 3 SPACE  &lt 6 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DELETE
+&mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -166,6 +166,17 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+        };
+
+        MEDIA {
+            bindings = <
+&trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &none     &kp PAGE_UP    &mo 7     &trans    &trans
+&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp C_MUTE      &trans  &kp HOME  &mkp MB1       &mkp MB2  &mkp MB2  &trans
+&trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &kp END   &kp PAGE_DOWN  &mkp MB4  &mkp MB5  &trans
+&trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                       &trans
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         MOUSE {
@@ -212,17 +223,6 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        MEDIA {
-            bindings = <
-&trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &none     &kp PAGE_UP    &mo 7     &trans    &trans
-&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp C_MUTE      &trans  &kp HOME  &mkp MB1       &mkp MB2  &mkp MB2  &trans
-&trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &kp END   &kp PAGE_DOWN  &mkp MB4  &mkp MB5  &trans
-&trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                       &trans
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &mo 1   &trans
@@ -246,7 +246,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <3 4>;
+            if-layers = <4 5>;
             then-layer = <8>;
         };
     };
