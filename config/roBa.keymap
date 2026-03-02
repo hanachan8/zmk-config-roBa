@@ -32,7 +32,6 @@
 
 &trackball {
     scroll-layers = <7>;
-    input-rate-ms = <15>;
 
     arrows {
         layers = <5>;
