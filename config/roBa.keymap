@@ -145,10 +145,10 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &lt 6 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 6 I    &kp O    &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 8 APOS
+&mt LEFT_ALT Q    &kp W         &lt 7 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 7 I    &kp O    &mt RIGHT_ALT P
+&mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 6 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 5 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 3 SPACE  &lt 8 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DELETE
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 3 SPACE  &lt 6 TAB        &kp BACKSPACE     &lt 4 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -187,10 +187,10 @@
 
         NUM {
             bindings = <
-&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp PAGE_UP    &none           &kp UP_ARROW    &none            &mt RIGHT_ALT PERCENT
-&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp HOME       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RCTRL COLON
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp PAGE_DOWN  &none           &none           &none            &kp RIGHT_SHIFT
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                          &trans
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &none     &kp PAGE_UP     &kp UP_ARROW    &none            &mt RIGHT_ALT PERCENT
+&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt RCTRL COLON
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp END   &kp PAGE_DOWN   &none           &none            &kp RIGHT_SHIFT
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -198,10 +198,21 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &zoom_in_ctrl_wheel   &trans  &trans  &trans  &trans
-&kp HOME    &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &zoom_out_ctrl_wheel  &trans  &trans  &trans  &trans
-&trans      &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans                &trans  &trans  &trans  &trans
-&trans      &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                        &trans
+&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &zoom_in_ctrl_wheel   &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp HOME  &trans      &trans  &zoom_out_ctrl_wheel  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp END   &trans      &trans  &trans                &trans  &trans  &trans  &trans
+&trans  &trans                  &trans          &trans                   &trans    &trans      &trans  &trans                                        &trans
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
+        };
+
+        MEDIA {
+            bindings = <
+&trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &none     &kp PAGE_UP    &mo 7     &trans    &trans
+&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp K_MUTE      &trans  &kp HOME  &mkp MB1       &mkp MB2  &mkp MB2  &trans
+&trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &kp END   &kp PAGE_DOWN  &mkp MB4  &mkp MB5  &trans
+&trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -224,17 +235,6 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
-
-        MEDIA {
-            bindings = <
-&trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &kp PAGE_UP    &trans    &mo 6     &trans    &trans
-&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp K_MUTE      &trans  &kp HOME       &mkp MB1  &mkp MB2  &mkp MB2  &trans
-&trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &kp PAGE_DOWN  &trans    &mkp MB4  &mkp MB5  &trans
-&trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                       &trans
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
     };
 
     conditional_layers {
@@ -242,7 +242,7 @@
 
         tri_layer {
             if-layers = <3 4>;
-            then-layer = <7>;
+            then-layer = <8>;
         };
     };
 };
