@@ -31,7 +31,6 @@
 };
 
 &trackball {
-    cpi = <800>;
     scroll-layers = <7>;
     input-rate-ms = <15>;
 
