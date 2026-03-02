@@ -210,7 +210,7 @@
         MEDIA {
             bindings = <
 &trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &none     &kp PAGE_UP    &mo 7     &trans    &trans
-&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp K_MUTE      &trans  &kp HOME  &mkp MB1       &mkp MB2  &mkp MB2  &trans
+&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp C_MUTE      &trans  &kp HOME  &mkp MB1       &mkp MB2  &mkp MB2  &trans
 &trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &kp END   &kp PAGE_DOWN  &mkp MB4  &mkp MB5  &trans
 &trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                       &trans
             >;
