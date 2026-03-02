@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors/report_rate_limit.dtsi>
 #include <scroll-snap.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
@@ -24,7 +23,6 @@
     input-processors = <
         &zip_temp_layer 2 500
         &zip_scroll_snap
-        &zip_report_rate_limit 15
     >;
 };
 
