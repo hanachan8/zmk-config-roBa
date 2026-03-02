@@ -33,10 +33,12 @@
         manual_mouse {
             layers = <2>;
             input-processors = <&zip_xy_scaler 2 1>;
+
         };
         auto_mouse {
             layers = <3>;
             input-processors = <&zip_xy_scaler 3 1>;
+        };
     };
 };
 
