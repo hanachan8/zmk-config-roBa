@@ -70,7 +70,7 @@
 
         mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <7 8>
+            key-positions = <7 8>;
         };
     };
 
