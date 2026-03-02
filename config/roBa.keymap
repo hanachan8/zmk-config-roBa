@@ -19,13 +19,13 @@
 
 &trackball_listener {
     input-processors = <
-        &zip_temp_layer 2 10000
+        &zip_temp_layer 3 10000
     >;
 };
 
 &mkp_input_listener {
     input-processors = <
-        &zip_temp_layer 2 250
+        &zip_temp_layer 3 250
     >;
 };
 
@@ -38,7 +38,7 @@
     scroll-layers = <7>;
 
     arrows {
-        layers = <5>;
+        layers = <6>;
         bindings =
             <&kp RIGHT_ARROW>,
             <&kp LEFT_ARROW>,
