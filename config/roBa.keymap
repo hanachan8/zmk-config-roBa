@@ -31,7 +31,9 @@
 };
 
 &trackball {
-    scroll-layers = <6>;
+    cpi = <800>;
+    scroll-layers = <7>;
+    input-rate-ms = <15>;
 
     arrows {
         layers = <5>;
@@ -66,9 +68,9 @@
             key-positions = <31 32>;
         };
 
-        test {
+        mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <7 8>;
+            key-positions = <7 8>
         };
     };
 
