@@ -30,6 +30,12 @@
     >;
 };
 
+&encoder_listener {
+    input-processors = <
+        &zip_report_rate_limit 15
+    >;
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
