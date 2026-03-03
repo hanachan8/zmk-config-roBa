@@ -26,17 +26,9 @@
     };
 };
 
-};
-
 &mkp_input_listener {
     input-processors = <
         &zip_temp_layer 3 250
-    >;
-};
-
-&encoder_listener {
-    input-processors = <
-        &zip_report_rate_limit 15
     >;
 };
 
