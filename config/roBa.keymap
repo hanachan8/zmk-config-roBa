@@ -87,29 +87,6 @@
             label = "TO_LAYER_0";
         };
 
-        zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&msc SCRL_UP>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-
-        zoom_out_ctrl_wheel: zoom_out_ctrl_wheel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&msc SCRL_DOWN>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
     };
 
     behaviors {
@@ -138,14 +115,6 @@
             bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
         };
 
-        td_q_escape: td_q_escape {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp Q>, <&kp EXSEL>;
-
-            label = "TD_Q_ESCAPE";
-        };
     };
 
     keymap {
