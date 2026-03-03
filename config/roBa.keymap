@@ -169,7 +169,7 @@
 &trans        &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
