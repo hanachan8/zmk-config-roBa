@@ -18,10 +18,14 @@
     >;
 };
 
-&trackball_listener {
-    input-processors = <
-        &zip_temp_layer 3 10000
-    >;
+/ {
+    encoder_listener: encoder_listener {
+        compatible = "zmk,input-listener";
+        device = <&left_encoder>;
+        input-processors = <&zip_report_rate_limit 15>;
+    };
+};
+
 };
 
 &mkp_input_listener {
