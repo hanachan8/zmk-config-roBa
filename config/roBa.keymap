@@ -8,7 +8,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 &zip_temp_layer {
-    layers = <0>; 
     require-prior-idle-ms = <500>;
     excluded-positions = <
         18 // J
