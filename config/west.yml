@@ -4,6 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: ssbb
+      url-base: https://github.com/ssbb
       
   projects:
     - name: zmk
