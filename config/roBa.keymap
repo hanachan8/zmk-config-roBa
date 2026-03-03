@@ -26,6 +26,13 @@
     };
 };
 
+&trackball_listener {
+    layers = <0>; 
+    input-processors = <
+        &zip_temp_layer 3 10000
+    >;
+};
+
 &mkp_input_listener {
     layers = <0>; 
     input-processors = <
