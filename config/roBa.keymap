@@ -217,10 +217,10 @@
 
         ARROW {
             bindings = <
-&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &zoom_in_ctrl_wheel   &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp HOME  &trans      &trans  &zoom_out_ctrl_wheel  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp END   &trans      &trans  &trans                &trans  &trans  &trans  &trans
-&trans  &trans                  &trans          &trans                   &trans    &trans      &trans  &trans                                        &trans
+&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp HOME  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp END   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                  &trans          &trans                   &trans    &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
