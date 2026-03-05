@@ -162,7 +162,7 @@
 &mt LEFT_ALT Q    &kp W         &lt 7 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 7 I    &kp O    &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 5 ENTER                             &lt 7 DELETE
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
