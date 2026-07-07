@@ -170,10 +170,10 @@
 
         MEDIA {
             bindings = <
-&trans  &kp LC(W)  &kp UP    &kp LC(R)  &kp LC(T)                                  &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &trans
-&trans  &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &kp C_MUTE      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &trans
-&trans  &trans     &trans    &trans     &kp C_VOLUME_DOWN  &trans          &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &mkp MB5
-&trans  &trans     &trans    &trans     &trans             &trans          &trans  &trans                                     &trans
+&trans  &kp LC(LS(TAB))  &kp UP    &kp LC(TAB)  &kp C_VOLUME_UP                      &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &trans
+&trans  &kp LEFT         &kp DOWN  &kp RIGHT    &kp C_VOL_DN     &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &trans
+&trans  &trans           &trans    &trans       &kp C_MUTE       &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &mkp MB5
+&trans  &trans           &trans    &trans       &trans           &trans      &trans  &trans                                     &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
