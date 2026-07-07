@@ -201,7 +201,7 @@
 
         NUM {
             bindings = <
-&kp KP_PLUS      &kp PAGE_UP      &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp KP_EQUAL  &kp PAGE_UP     &kp UP_ARROW    &kp HOME         &trans
+&kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp KP_EQUAL  &kp PAGE_UP     &kp UP_ARROW    &kp HOME         &kp RIGHT_ALT
 &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp PERCENT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp DOLLAR    &kp PAGE_DOWN   &none           &kp END          &trans
 &trans           &trans           &trans           &trans           &trans        &kp TAB                      &trans  &trans                                                         &trans
