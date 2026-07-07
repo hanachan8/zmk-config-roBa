@@ -18,10 +18,10 @@ manifest:
       remote: kumamuk-git
       revision: main
 
-    - name: zmk-input-processor-report-rate-limit
-      remote: badjeff
-      revision: main
-      path: modules/zmk-input-processor-report-rate-limit
+   - name: zmk-input-processor-report-rate-limit
+     remote: badjeff
+     revision: f43f37aae7aaa7bf0ec4d432683b873a7e3a8efa
+     path: modules/zmk-input-processor-report-rate-limit
 
     - name: zmk-listeners
       remote: ssbb
