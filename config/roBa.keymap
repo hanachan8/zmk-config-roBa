@@ -1,3 +1,4 @@
+#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -5,13 +6,15 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
-
-/ {
-    encoder_listener: encoder_listener {
-        compatible = "zmk,input-listener";
-        device = <&left_encoder>;
-        input-processors = <&zip_report_rate_limit 15>;
-    };
+&zip_temp_layer {
+    require-prior-idle-ms = <500>;
+    excluded-positions = <
+        18 // J
+        19 // K
+        20 // L
+        31 // ,
+        32 // .
+    >;
 };
 
 &trackball_listener {
@@ -150,7 +153,7 @@
 &mt LEFT_ALT Q    &kp W         &lt 7 E       &kp R     &kp T                                           &kp Y        &kp U  &lt 7 I    &kp O    &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D         &kp F     &lt 1 G      &trans           &kp RIGHT_GUI     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V     &kp B        &lt 6 MINUS      &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 5 ENTER                             &lt 6 DELETE
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB        &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -158,10 +161,10 @@
 
         HALF_SPEED {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -211,10 +214,10 @@
 
         ARROW {
             bindings = <
-&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp HOME  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp END   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                  &trans          &trans                   &trans    &trans      &trans  &trans                          &trans
+&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                        &zoom_in_ctrl_wheel   &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp HOME  &trans      &trans  &zoom_out_ctrl_wheel  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp END   &trans      &trans  &trans                &trans  &trans  &trans  &trans
+&trans  &trans                  &trans          &trans                   &trans    &trans      &trans  &trans                                        &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
