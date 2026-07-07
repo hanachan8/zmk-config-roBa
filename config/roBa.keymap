@@ -87,25 +87,21 @@
         zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&msc SCRL_UP>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_press &kp LCTRL &msc SCRL_UP>,
+                <&macro_release &msc SCRL_UP &kp LCTRL>;
         };
 
         zoom_out_ctrl_wheel: zoom_out_ctrl_wheel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&msc SCRL_DOWN>,
-                <&macro_release>,
-                <&kp LCTRL>;
+                <&macro_press &kp LCTRL &msc SCRL_DOWN>,
+                <&macro_release &msc SCRL_DOWN &kp LCTRL>;
         };
     };
 
