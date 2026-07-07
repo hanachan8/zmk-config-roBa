@@ -170,10 +170,10 @@
 
         MEDIA {
             bindings = <
-&kp C_VOLUME_UP    &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_out_ctrl_wheel                      &kp RC(PAGE_UP)    &kp HOME  &mkp MB3  &kp PAGE_UP    &kp RIGHT_ALT
-&kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_ctrl_wheel  &trans      &trans  &trans             &mkp MB1  &trans    &mkp MB2       &kp RCTRL
-&kp C_MUTE         &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans                &trans      &trans  &kp RC(PAGE_DOWN)  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
-&trans             &trans            &trans    &trans             &trans                &trans      &trans  &trans                                                &trans
+&kp C_VOLUME_UP    &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_out_ctrl_wheel                      &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &kp RIGHT_ALT
+&kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_ctrl_wheel  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
+&kp C_MUTE         &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans                &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
+&trans             &trans            &trans    &trans             &trans                &trans      &trans  &trans                                     &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -192,10 +192,10 @@
 
         FUNCTION {
             bindings = <
-&kp LEFT_ALT  &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT DOLLAR
-&trans        &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
-&trans        &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
-&trans        &trans  &trans  &trans  &trans   &kp TAB      &trans  &trans                                                                 &trans
+&kp LEFT_ALT  &kp F7        &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT DOLLAR
+&trans        &kp F4        &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
+&trans        &kp F1        &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
+&trans        &kp LEFT_ALT  &trans  &trans  &trans   &kp TAB      &trans  &trans                                                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
@@ -203,10 +203,10 @@
 
         NUM {
             bindings = <
-&trans  &kp HOME        &kp UP          &kp LC(PAGE_UP)    &kp KP_EQUAL                                       &kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PERCENT   &kp LC(LA(KP_NUMBER_0))      &trans  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH
-&trans  &kp END         &none           &kp LC(PAGE_DOWN)  &kp DOLLAR    &kp TILDE                    &trans  &kp KP_NUMBER_0  &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&trans  &trans          &trans          &trans             &trans        &kp TAB                      &trans  &trans                                                              &trans
+&trans  &kp LC(PAGE_UP)  &kp UP          &kp LC(PAGE_DOWN)  &kp KP_EQUAL                                       &kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
+&trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW    &kp PERCENT   &kp LC(LA(KP_NUMBER_0))      &trans  &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH
+&trans  &none            &none           &none              &kp DOLLAR    &kp TILDE                    &trans  &kp KP_NUMBER_0  &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&trans  &trans           &trans          &trans             &trans        &kp TAB                      &trans  &trans                                                              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
