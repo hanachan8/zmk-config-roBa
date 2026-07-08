@@ -57,6 +57,11 @@
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
         };
+
+        MB3 {
+            bindings = <&mkp MB3>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
