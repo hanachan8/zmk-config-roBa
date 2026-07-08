@@ -53,24 +53,9 @@
     combos {
         compatible = "zmk,combos";
 
-        percent {
-            bindings = <&kp PRCNT>;
-            key-positions = <14 15>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <26 27>;
-        };
-
         excl {
             bindings = <&kp EXCL>;
             key-positions = <31 32>;
-        };
-
-        mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <7 8>;
         };
     };
 
@@ -104,6 +89,13 @@
                 <&kp LCTRL &msc SCRL_DOWN>,
                 <&macro_release>,
                 <&msc SCRL_DOWN &kp LCTRL>;
+        };
+
+        to_fun_gui: fun_gui {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT_WIN>;
+            label = "FUN_GUI";
         };
     };
 
@@ -149,9 +141,9 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E         &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D           &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&mt LCTRL A       &kp S         &kp D           &kp F     &kp G        &kp LS(LG(S))      &kp DELETE        &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C           &kp V     &kp B        &lt 1 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &lt 5 LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
+&kp LCTRL         &kp LEFT_ALT  &lt 5 LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp RIGHT_WIN
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -168,9 +160,9 @@
 
         M_MOUSE {
             bindings = <
-&trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_ctrl_wheel                       &trans  &kp PAGE_UP    &mkp MB3  &kp HOME  &kp RIGHT_ALT
-&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_ctrl_wheel  &trans      &trans  &trans  &mkp MB1       &trans    &mkp MB2  &kp RCTRL
-&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans                &trans      &trans  &trans  &kp PAGE_DOWN  &mkp MB4  &kp END   &kp RIGHT_SHIFT
+&trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_ctrl_wheel                       &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &kp RIGHT_ALT
+&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_ctrl_wheel  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
+&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans                &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
 &trans  &trans            &trans    &trans             &trans                &trans      &trans  &trans                                     &trans
             >;
 
@@ -190,10 +182,10 @@
 
         FUNCTION {
             bindings = <
-&kp LEFT_ALT    &kp F7        &kp F8  &kp F9  &kp F12                       &kp AMPERSAND  &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
-&kp LCTRL       &kp F4        &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
-&kp LEFT_SHIFT  &kp F1        &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AT         &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
-&trans          &kp LEFT_ALT  &trans  &trans  &trans   &kp TAB      &trans  &trans                                                                 &trans
+&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AMPERSAND  &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
+&kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
+&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AT         &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
+&trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -201,10 +193,10 @@
 
         NUM {
             bindings = <
-&kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp KP_EQUAL  &kp PAGE_UP     &kp UP_ARROW    &kp HOME         &kp RIGHT_ALT
-&kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp PERCENT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp DOLLAR    &kp PAGE_DOWN   &none           &kp END          &trans
-&trans           &trans           &trans           &trans           &trans        &kp TAB                      &trans  &trans                                                         &trans
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp KP_EQUAL  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
+&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp PERCENT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp TILDE                    &trans  &kp DOLLAR    &kp END         &none           &kp PAGE_DOWN    &trans
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                         &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
