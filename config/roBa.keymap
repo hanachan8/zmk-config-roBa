@@ -67,7 +67,7 @@
             label = "TO_LAYER_0";
         };
 
-       to_layer_4: to_layer_4 {
+        to_layer_4: to_layer_4 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
@@ -97,7 +97,6 @@
                 <&macro_release>,
                 <&msc SCRL_DOWN &kp LCTRL>;
         };
-
     };
 
     behaviors {
@@ -125,7 +124,6 @@
             tapping-term-ms = <250>;
             bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
         };
-
     };
 
     keymap {
@@ -133,10 +131,10 @@
 
         default_layer {
             bindings = <
-&mt LEFT_ALT Q    &kp W         &lt 7 E         &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D           &kp F     &kp G        &kp LS(LG(S))      &kp DELETE        &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
-&mt LEFT_SHIFT Z  &kp X         &kp C           &kp V     &kp B        &lt 1 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &lt 5 LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp RIGHT_WIN
+&mt LEFT_ALT Q    &kp W         &lt 7 E               &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
+&mt LCTRL A       &kp S         &kp D                 &kp F     &kp G        &kp LS(LG(S))      &kp DELETE        &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&mt LEFT_SHIFT Z  &kp X         &kp C                 &kp V     &kp B        &lt 1 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &to_layer_4 LEFT_WIN  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp RIGHT_WIN
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -155,8 +153,8 @@
             bindings = <
 &trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_wheel                       &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &kp RIGHT_ALT
 &trans  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_wheel  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
-&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans                &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
-&trans  &trans            &trans    &trans             &trans                &trans      &trans  &trans                                     &trans
+&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans           &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
+&trans  &trans            &trans    &trans             &trans           &trans      &trans  &trans                                     &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -199,8 +197,8 @@
             bindings = <
 &trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &zoom_in_wheel                       &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &zoom_out_wheel  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans                &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                  &trans          &trans                   &trans                &trans      &trans  &trans                          &trans
+&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                  &trans          &trans                   &trans           &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
