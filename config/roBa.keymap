@@ -74,7 +74,7 @@
             label = "TO_LAYER_4";
         };
 
-        zoom_in_ctrl_wheel: zoom_in_ctrl_wheel {
+        zoom_in_wheel: zoom_in_wheel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>;
