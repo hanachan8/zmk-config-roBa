@@ -163,8 +163,8 @@
         M_MOUSE {
             bindings = <
 &trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_wheel                       &trans  &kp HOME  &trans    &kp PAGE_UP    &kp RIGHT_ALT
-&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_wheel  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
-&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans           &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
+&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &mo 1            &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
+&trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &zoom_out_wheel  &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
 &trans  &trans            &trans    &trans             &trans           &trans      &trans  &trans                                     &trans
             >;
 
@@ -184,9 +184,9 @@
 
         FUNCTION {
             bindings = <
-&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
-&kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
-&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AMPERSAND  &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
+&kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp INT_YEN    &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
+&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AT         &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
 
@@ -195,7 +195,7 @@
 
         NUM {
             bindings = <
-&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp INT_YEN  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp HASH     &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
 &mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp DOLLAR   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp EQUAL                    &trans  &kp PERCENT  &kp END         &none           &kp PAGE_DOWN    &trans
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                        &trans
@@ -217,8 +217,8 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &mo 1   &trans
-&trans  &trans  &trans  &mo 1   &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mo 1   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
@@ -226,10 +226,10 @@
 
         BT_MEDIA {
             bindings = <
-&trans  &trans  &trans  &trans  &kp C_VOLUME_UP                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &kp C_MUTE         &trans      &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans             &trans      &trans  &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &kp C_VOLUME_UP                             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &kp C_MUTE         &trans      &bootloader  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &trans      &sys_reset   &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans             &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
