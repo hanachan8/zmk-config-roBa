@@ -184,9 +184,9 @@
 
         FUNCTION {
             bindings = <
-&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AMPERSAND  &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
+&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
 &kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
-&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AT         &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
 
@@ -195,9 +195,9 @@
 
         NUM {
             bindings = <
-&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &trans       &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
-&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp PERCENT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp EQUAL                    &trans  &kp DOLLAR   &kp END         &none           &kp PAGE_DOWN    &trans
+&mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &kp INT_YEN  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
+&mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &kp DOLLAR   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp EQUAL                    &trans  &kp PERCENT  &kp END         &none           &kp PAGE_DOWN    &trans
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                        &trans
             >;
 
