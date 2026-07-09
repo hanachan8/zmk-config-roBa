@@ -162,7 +162,7 @@
 
         M_MOUSE {
             bindings = <
-&trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_wheel                       &trans  &kp HOME  &mkp MB3  &kp PAGE_UP    &kp RIGHT_ALT
+&trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_wheel                       &trans  &kp HOME  &trans    &kp PAGE_UP    &kp RIGHT_ALT
 &trans  &kp LEFT          &kp DOWN  &kp RIGHT          &zoom_out_wheel  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
 &trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &trans           &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
 &trans  &trans            &trans    &trans             &trans           &trans      &trans  &trans                                     &trans
