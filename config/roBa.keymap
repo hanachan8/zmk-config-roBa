@@ -145,7 +145,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEFAULT {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
@@ -176,7 +176,7 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        AT_MOUSE {
+        A_MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
@@ -198,7 +198,7 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        NUM {
+        NUMBER {
             bindings = <
 &mt LEFT_ALT KP_PLUS        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                                       &trans  &kp HOME        &kp UP_ARROW    &kp PAGE_UP      &kp RIGHT_ALT
 &mt LCTRL KP_ASTERISK       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH  &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
@@ -229,7 +229,7 @@
             >;
         };
 
-        BT_MEDIA {
+        MEDIA_BT {
             bindings = <
 &trans  &trans  &trans  &trans  &kp C_VOLUME_UP                                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &kp C_MUTE         &kp K_SLEEP      &bootloader  &trans        &trans        &trans        &trans        &trans
