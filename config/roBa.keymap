@@ -189,8 +189,8 @@
 
         FUNCTION {
             bindings = <
-&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RIGHT_ALT SEMICOLON
-&kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RCTRL COLON
+&kp LEFT_ALT    &kp F7  &kp F8  &kp F9  &kp F12                       &kp AT         &kp TILDE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &mt RIGHT_ALT SEMICOLON
+&kp LCTRL       &kp F4  &kp F5  &kp F6  &kp F11  &trans       &trans  &kp HASH       &kp MINUS  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mt RCTRL COLON
 &kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13      &trans  &kp AMPERSAND  &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt RIGHT_SHIFT BACKSLASH
 &trans          &trans  &trans  &trans  &trans   &trans       &trans  &trans                                                                 &trans
             >;
