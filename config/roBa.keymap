@@ -126,21 +126,6 @@
 
         // ================= ここから Android用 追加分 =================
 
-        // Androidモード用のWinキー。win_layer5と同じくGUI+NUMBERレイヤーを保持しつつ、
-        // さらにレイヤー10(ANDROID_CMD)も重ねる。→ Cmd+I/J/K/L が Cmd+Ctrl+矢印になる
-        android_cmd: android_cmd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 5 &mo 10 &kp LGUI>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LGUI &mo 10 &mo 5>;
-        };
-
         // BT0:Mac BT1:win BT2:iPad BT3:android BT4:win= Windows用
         bt0_mac: bt0_mac {
             compatible = "zmk,behavior-macro";
@@ -200,6 +185,78 @@
             bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
         };
 
+        // Windows-style shortcuts, enabled only by bindings on Android layers.
+        // Keep GUI where Android needs Cmd; suppress it for Alt+Tab/Ctrl+Space.
+        android_tab: android_tab {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 2 TAB>, <&kp LA(TAB)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_space: android_space {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 4 SPACE>, <&kp LC(SPACE)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_d: android_d {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp ENTER>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_a: android_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LCTRL A>, <&kp N>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_l: android_l {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&kp LS(L)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_up: android_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW>, <&kp LC(UP_ARROW)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_down: android_down {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN_ARROW>, <&kp LC(DOWN_ARROW)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_left: android_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&alt_back>, <&kp LC(LEFT_ARROW)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
+        android_right: android_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>;
+            mods = <(MOD_LGUI | MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI | MOD_RGUI)>;
+        };
+
         // Alt+← を Cmd+Backspace（Androidの「戻る」）に変える。
         // keep-mods を書かないので Alt は外れて、Cmd+Backspace だけが送られる
         alt_back: alt_back {
@@ -227,9 +284,9 @@
         ANDROID {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
-&mt LCTRL A       &kp S         &kp D        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&android_a       &kp S         &android_d        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &android_l    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 9 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &android_cmd  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
+&kp LCTRL         &kp LEFT_ALT  &kp LGUI  &td_lang  &android_space  &android_tab          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -308,7 +365,7 @@
             >;
         };
 
-        // 0: DEFAULT, 1: ANDROID, 2-8: shared layers, 9: HALF_SPEED, 10-11: Android overlays
+        // 0: DEFAULT, 1: ANDROID, 2-8: shared layers, 9: HALF_SPEED, 10-13: Android overlays
 
         // 9: HALF_SPEED … moved above the two base layers; all keys remain transparent.
         HALF_SPEED {
@@ -320,28 +377,45 @@
             >;
         };
 
-        // 10: ANDROID_CMD … android_cmd を押している間だけ有効。IJKL を Cmd+Ctrl+矢印にする
-        ANDROID_CMD {
+        // 10: Android + NUMBER. Other keys fall through to the shared layer.
+        ANDROID_NUMBER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &kp LC(UP_ARROW)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans &trans &trans &trans &trans                   &trans &trans &android_up &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &android_left &android_down &android_right &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans
             >;
         };
 
-        // 11: ANDROID_ARROW … Androidモード中にARROWレイヤー(6)を押しているときだけ有効（下のconditional_layers）
-        //     ←の位置(11)だけを alt_back に差し替える。FUNCTIONレイヤーのF4(Alt+F4)には触らない
+        // 11: Android + ARROW.
         ANDROID_ARROW {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &alt_back  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans &trans &android_up &trans &trans                   &trans &trans &trans &trans &trans
+&trans &android_left &android_down &android_right &trans &trans    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans
+            >;
+        };
+
+        // 12: Android + manual mouse. Mouse buttons and wheel remain shared.
+        ANDROID_MOUSE {
+            bindings = <
+&trans &trans &android_up &trans &trans                   &trans &trans &trans &trans &trans
+&trans &android_left &android_down &android_right &trans &trans    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans
+            >;
+        };
+        // 13: Keep Bluetooth selection above Android arrow overlays.
+        ANDROID_MEDIA {
+            bindings = <
+&trans  &trans  &trans  &trans  &kp C_VOLUME_UP                             &bt0_mac  &bt1_win  &bt2_ipad  &bt3_android  &bt4_win
+&trans  &trans  &trans  &trans  &kp C_MUTE         &trans      &bootloader  &trans    &trans    &trans    &trans        &trans
+&trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &trans      &sys_reset   &trans    &trans    &trans    &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans             &trans      &trans       &trans                                      &bt BT_CLR_ALL
             >;
         };
     };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -350,6 +424,20 @@
             then-layer = <8>;
         };
 
+        android_media {
+            if-layers = <1 8>;
+            then-layer = <13>;
+        };
+
+        android_number {
+            if-layers = <1 5>;
+            then-layer = <10>;
+        };
+
+        android_mouse {
+            if-layers = <1 2>;
+            then-layer = <12>;
+        };
         // Android(1) + ARROW(6) が同時に有効なとき、レイヤー11を有効にする
         android_back {
             if-layers = <1 6>;
