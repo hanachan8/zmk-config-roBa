@@ -69,13 +69,13 @@
         };
 
         // ---- Android用コンボを足すときの雛形（コメントを外して使う） ----
-        // layers = <9> と書くと、Androidメインレイヤー(9)のときだけ反応する。
+        // layers = <1> と書くと、Androidメインレイヤー(1)のときだけ反応する。
         // layers を書かないコンボ（上の3つ）は今までどおり全レイヤーで反応する。
         //
         // android_example {
         //     bindings = <&kp ESCAPE>;
         //     key-positions = <10 11>;
-        //     layers = <9>;
+        //     layers = <1>;
         // };
     };
 
@@ -160,11 +160,11 @@
             bindings = <&macro_tap &bt BT_SEL 2 &to 0>;
         };
 
-        // BT3 = Android用（BT_SEL 3）。切替と同時にレイヤー9(ANDROID)へ
+        // BT3 = Android用（BT_SEL 3）。切替と同時にレイヤー1(ANDROID)へ
         bt3_android: bt3_android {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &bt BT_SEL 3 &to 9>;
+            bindings = <&macro_tap &bt BT_SEL 3 &to 1>;
         };
 
         bt4_win: bt4_win {
@@ -217,26 +217,28 @@
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
 &mt LCTRL A       &kp S         &kp D        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
-&mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 1 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 9 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &win_layer5  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        HALF_SPEED {
+        ANDROID {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
+&mt LCTRL A       &kp S         &kp D        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &kp L    &lt 2 APOS
+&mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 9 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &android_cmd  &td_lang  &lt 4 SPACE  &lt 2 TAB          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         M_MOUSE {
             bindings = <
 &trans  &kp LC(LS(TAB))   &kp UP    &kp LC(TAB)        &zoom_in_wheel                       &trans  &kp HOME  &trans    &kp PAGE_UP    &kp RIGHT_ALT
-&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &mo 1            &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
+&trans  &kp LEFT          &kp DOWN  &kp RIGHT          &mo 9            &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2       &kp RCTRL
 &trans  &kp LS(LG(LEFT))  &trans    &kp LS(LG(RIGHT))  &zoom_out_wheel  &trans      &trans  &trans  &kp END   &mkp MB4  &kp PAGE_DOWN  &kp RIGHT_SHIFT
 &trans  &trans            &trans    &trans             &trans           &trans      &trans  &trans                                     &trans
             >;
@@ -291,7 +293,7 @@
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &mo 1   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &mo 9   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
@@ -306,15 +308,15 @@
             >;
         };
 
-        // ===== ここから Android用 追加レイヤー（必ず末尾に足す。既存の番号は動かさない） =====
+        // 0: DEFAULT, 1: ANDROID, 2-8: shared layers, 9: HALF_SPEED, 10-11: Android overlays
 
-        // 9: ANDROID … BT3（4番目の接続先）用のメイン。上書きするのはWinキーの位置(36)だけ
-        ANDROID {
+        // 9: HALF_SPEED … moved above the two base layers; all keys remain transparent.
+        HALF_SPEED {
             bindings = <
-&trans  &trans  &trans          &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &android_cmd    &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -348,9 +350,9 @@
             then-layer = <8>;
         };
 
-        // Android(9) + ARROW(6) が同時に有効なとき、レイヤー11を有効にする
+        // Android(1) + ARROW(6) が同時に有効なとき、レイヤー11を有効にする
         android_back {
-            if-layers = <9 6>;
+            if-layers = <1 6>;
             then-layer = <11>;
         };
     };
