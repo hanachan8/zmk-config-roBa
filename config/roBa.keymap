@@ -186,12 +186,13 @@
         };
 
         // Windows-style shortcuts, enabled only by bindings on Android layers.
-        // Keep GUI where Android needs Cmd; suppress it for Alt+Tab/Ctrl+Space.
-        android_tab: android_tab {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&lt 2 TAB>, <&kp LA(TAB)>;
-            mods = <(MOD_LGUI | MOD_RGUI)>;
+        // Keep GUI where Android needs Cmd; suppress it for Ctrl+Space.
+        // Roles: 0 = left Win + NUMBER, 1 = right Win, 2 = Tab/history.
+        android_switcher: android_switcher {
+            compatible = "roba,behavior-android-switcher";
+            #binding-cells = <1>;
+            bindings = <&lt 2 TAB>;
+            number-layer = <5>;
         };
 
         android_space: android_space {
@@ -284,9 +285,9 @@
         ANDROID {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
-&android_a       &kp S         &android_d        &kp F     &kp G        &kp LS(LG(S))      &kp RIGHT_WIN     &kp H        &kp J  &kp K      &android_l    &lt 2 APOS
+&android_a       &kp S         &android_d        &kp F     &kp G        &kp LS(LG(S))      &android_switcher 1     &kp H        &kp J  &kp K      &android_l    &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 9 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LGUI  &td_lang  &android_space  &android_tab          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
+&kp LCTRL         &kp LEFT_ALT  &android_switcher 0  &td_lang  &android_space  &android_switcher 2          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
