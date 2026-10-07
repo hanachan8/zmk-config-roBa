@@ -38,7 +38,7 @@ layers:
   - LCTRL
   - LEFT ALT
   - {t: Win, h: Num}
-  - {t: LANG, h: '2x: Kana'}
+  - {t: LANG2, h: '2x: LANG1'}
   - {t: SPACE, h: FUNCTION}
   - {t: TAB, h: M_MOUSE}
   - BACKSPACE
@@ -82,7 +82,7 @@ layers:
   - LCTRL
   - LEFT ALT
   - {t: Win, h: Num}
-  - {t: LANG, h: '2x: Kana'}
+  - {t: LANG2, h: '2x: LANG1'}
   - {t: Space, h: Fn, s: 'Win: Lang'}
   - {t: TAB, h: M_MOUSE}
   - BACKSPACE
