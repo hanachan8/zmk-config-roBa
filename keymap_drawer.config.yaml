@@ -1,0 +1,28 @@
+parse_config:
+  raw_binding_map:
+    "&win_layer5": {t: Win, h: Num}
+    "&td_lang": {t: LANG, h: "2x: Kana"}
+    "&zoom_in_wheel": "Zoom +"
+    "&zoom_out_wheel": "Zoom -"
+    "&android_a": {t: A, h: Ctrl, s: "Win: Notify"}
+    "&android_d": {t: D, s: "Win: Home"}
+    "&android_space": {t: Space, h: Fn, s: "Win: Lang"}
+    "&android_number_o": {t: PgUp, s: "Win: Gemini"}
+    "&android_up": {t: "↑", s: "Win: Max"}
+    "&android_down": {t: "↓", s: "Win: Popup"}
+    "&android_left": {t: "←", h: "Alt: Back", s: "Win: Split"}
+    "&android_right": {t: "→", s: "Win: Split"}
+    "&alt_back": {t: "←", s: "Alt: Back"}
+    "&bt0_mac": {t: BT0, h: Base, s: Mac}
+    "&bt1_win": {t: BT1, h: Base, s: Win}
+    "&bt2_ipad": {t: BT2, h: Base, s: iPad}
+    "&bt3_android": {t: BT3, h: Android}
+    "&bt4_win": {t: BT4, h: Base, s: Win}
+    "&mkp MB1": "Mouse 1"
+    "&mkp MB2": "Mouse 2"
+    "&mkp MB3": "Mouse 3"
+    "&mkp MB4": "Mouse 4"
+    "&bootloader": BOOT
+    "&sys_reset": RESET
+draw_config:
+  shrink_wide_legends: 6
