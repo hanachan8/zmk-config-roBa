@@ -218,10 +218,11 @@
             keep-mods = <(MOD_LGUI | MOD_RGUI)>;
         };
 
-        android_l: android_l {
+        // Keep Page Up on NUMBER, but send Cmd+O while Win is held.
+        android_number_o: android_number_o {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&kp LS(L)>;
+            bindings = <&kp PAGE_UP>, <&kp O>;
             mods = <(MOD_LGUI | MOD_RGUI)>;
             keep-mods = <(MOD_LGUI | MOD_RGUI)>;
         };
@@ -285,7 +286,7 @@
         ANDROID {
             bindings = <
 &mt LEFT_ALT Q    &kp W         &lt 7 E      &kp R     &kp T                                             &kp Y        &kp U  &lt 7 I    &lt 6 O  &mt RIGHT_ALT P
-&android_a       &kp S         &android_d        &kp F     &kp G        &kp LS(LG(S))      &android_switcher 1     &kp H        &kp J  &kp K      &android_l    &lt 2 APOS
+&android_a       &kp S         &android_d        &kp F     &kp G        &kp LS(LG(S))      &android_switcher 1     &kp H        &kp J  &kp K      &kp L         &lt 2 APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C        &kp V     &kp B        &lt 9 MINUS        &mt RCTRL ESCAPE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_ALT  &android_switcher 0  &td_lang  &android_space  &android_switcher 2          &kp BACKSPACE     &lt 5 ENTER                             &kp DELETE
             >;
@@ -381,7 +382,7 @@
         // 10: Android + NUMBER. Other keys fall through to the shared layer.
         ANDROID_NUMBER {
             bindings = <
-&trans &trans &trans &trans &trans                   &trans &trans &android_up &trans &trans
+&trans &trans &trans &trans &trans                   &trans &trans &android_up &android_number_o &trans
 &trans &trans &trans &trans &trans &trans    &trans &trans &android_left &android_down &android_right &trans
 &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans    &trans &trans &trans
