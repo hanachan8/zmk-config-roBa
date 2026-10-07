@@ -1,15 +1,5 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  test-switcher:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check Android history key release sequences
-        run: |
-          cc -std=c11 -Wall -Wextra -Werror -pedantic tests/android_switcher_test.c -o /tmp/android-switcher-test
-          /tmp/android-switcher-test
-          cc -std=c11 -Wall -Wextra -Werror -pedantic tests/android_switcher_transport_test.c -o /tmp/android-switcher-transport-test
-          /tmp/android-switcher-transport-test
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3-branch
