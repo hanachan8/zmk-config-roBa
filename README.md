@@ -11,6 +11,7 @@ bottom labels show holds unless prefixed with a modifier or `2x` (double tap).
 - History uses ordinary Alt + Tab. Win + Tab has no custom conversion.
 - ANDROID_NUMBER / ARROW / MOUSE / MEDIA are automatic overlays; transparent keys
   inherit from the active shared layers. See ANDROID.md for activation conditions.
+- `HALF_SPEED_SCROLL` activates automatically while SCROLL (7) and HALF_SPEED (9) are held together, preserving trackball scrolling at reduced speed.
 - `LANG`: single tap LANGUAGE_2, double tap LANGUAGE_1 (host/IME dependent).
 
 <img src="keymap-drawer/roBa.svg" >

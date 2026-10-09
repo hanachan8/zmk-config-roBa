@@ -33,7 +33,8 @@
 };
 
 &trackball {
-    scroll-layers = <7>;
+    // The driver checks only the highest active layer. 14 represents 7 + 9.
+    scroll-layers = <7 14>;
 
     arrows {
         layers = <6>;
@@ -409,9 +410,23 @@
 &trans  &trans  &trans  &trans  &trans             &trans      &trans       &trans                                      &bt BT_CLR_ALL
             >;
         };
+        // 14: Automatic scroll + half-speed overlay; no new physical key.
+        HALF_SPEED_SCROLL {
+            bindings = <
+&trans &trans &trans &trans &trans                     &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans     &trans &trans                      &trans
+            >;
+        };
     };
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
+        half_speed_scroll {
+            if-layers = <7 9>;
+            then-layer = <14>;
+        };
 
         tri_layer {
             if-layers = <4 5>;
