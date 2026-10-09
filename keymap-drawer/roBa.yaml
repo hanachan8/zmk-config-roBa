@@ -55,7 +55,7 @@ layers:
   - {t: I, h: SCROLL}
   - {t: O, h: ARROW}
   - {t: P, h: RIGHT ALT}
-  - {t: A, h: Ctrl, s: 'Win: Notify'}
+  - {t: A, h: Ctrl, s: 'Win:Notify'}
   - S
   - {t: D, s: 'Win: Home'}
   - F
@@ -449,7 +449,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ↑, s: 'Win: Max'}
-  - {t: PgUp, s: 'Win: Gemini'}
+  - {t: PgUp, s: 'Win:Gemini'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
