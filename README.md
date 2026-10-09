@@ -9,8 +9,8 @@ bottom labels show holds unless prefixed with a modifier or `2x` (double tap).
 - Left Win holds Win + NUMBER; right Win keeps the base letter layout.
 - Android: right Win + L = screen off; left Win + O = Gemini.
 - History uses ordinary Alt + Tab. Win + Tab has no custom conversion.
-- ANDROID_NUMBER / ARROW / MOUSE / MEDIA are automatic overlays; transparent keys
-  inherit from the active shared layers. See ANDROID.md for activation conditions.
+- ANDROID_NUMBER (9) is the only Android overlay. ARROW and M_MOUSE use shared bindings.
+- MEDIA_BT (10) is shared by both systems and stays above ANDROID_NUMBER.
 - HALF_SPEED (2) sits below the mouse and scroll layers so reduced speed does not override their modes.
 - `LANG`: single tap LANGUAGE_2, double tap LANGUAGE_1 (host/IME dependent).
 

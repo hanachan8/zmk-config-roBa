@@ -39,7 +39,7 @@ https://www.samsung.com/uk/support/mobile-devices/what-is-the-edge-panel-and-how
 - 例：左Win + Lの位置 → Cmd + Ctrl + →（右へ分割）。Enter長押しは不要です。
 - 右Win + Lは画面OFFです。右Win + D/Aもホーム／通知として使えます。左Win側の同じ物理位置は数字・矢印になります。
 - 左Win + OはCmd + Oを送ります。WinなしのEnter長押し + OはPage Upを維持します。
-- O長押しの矢印レイヤー、手動マウスレイヤーの通常矢印でも同じ変換を使えます。
+- O長押しのARROWと手動マウスのM_MOUSEはWindowsと共通です。Android専用の矢印変換は適用しません。
 - Bluetooth切替はSpace長押し + Enter長押しで開きます。Win + Spaceは言語切替なので、Winを離して操作してください。
 
 通常の文字入力、Ctrl・Alt・Shift、Tab長押しのマウスレイヤー、Space長押しのFunctionレイヤーは維持しています。
@@ -59,23 +59,18 @@ Windows側（レイヤー0）の配列とWinキーの数字レイヤー動作は
 2. 通常のAlt + Tabで候補を切り替え、Altを離すと確定できること。Win + Tabは独自変換を行わないこと。
 3. 右Win + D/A/LとWin + Spaceが上表の操作になること。
 4. 左Win + I/J/K/Lでウィンドウ操作ができ、右Win + Lは画面OFFになること。Enter長押しの通常数字・矢印も使えること。
-5. 各矢印レイヤーのAlt + ←が戻る操作になり、Alt + F4が維持されること。
+5. NUMBER上のAlt + ←が戻る操作になり、ARROW・M_MOUSEでは共通のキー入力が維持されること。
 6. Androidから5つの接続先を選べて、他の接続先では通常配列へ戻ること。
 
 ZMK Studioで保存した配列がある場合、書き込んだソースの配列と異なる可能性があります。
 動作が一致しない場合は、保存内容を確認してからStudioでキーマップを初期状態へ戻してください。
 
-## Android専用の4つの補助レイヤー
+## Android専用の補助レイヤー
 
-基本配列のANDROID（1）に加えて、次の4枚を自動で重ねます。手動切替は不要です。
+基本配列のANDROID（1）に加えて、ANDROID_NUMBER（9）だけを自動で重ねます。
+Android（1）と数字（6）が同時に有効なとき、I/J/K/Lの矢印とO位置をAndroid向けに変換します。残りのキーは共通の数字レイヤーを使用します。
 
-| 番号 | 名前 | 自動で有効になる条件 | 役割 |
-|---|---|---|---|
-| 10 | ANDROID_NUMBER | Android（1）＋数字（6） | I/J/K/L位置の矢印をAndroid向けに変換。Win＋矢印とAlt＋←に対応。O位置はWin保持中のみCmd＋O |
-| 11 | ANDROID_ARROW | Android（1）＋矢印（7） | 矢印レイヤー内の通常矢印に同じ変換を適用 |
-| 12 | ANDROID_MOUSE | Android（1）＋手動マウス（3） | 手動マウス内の通常矢印に同じ変換を適用。マウスボタンは既存配置を使用 |
-| 13 | ANDROID_MEDIA | Android（1）＋Bluetooth・音量（9） | 上位の矢印設定に接続先選択が隠れないよう、Bluetooth・音量操作を最優先にする |
-
-10～12は必要な矢印と、10のO位置だけを上書きし、残りは共有レイヤーを使用します。Windows側へAndroidの変換が混ざらないように分離しています。
+ARROW（7）とM_MOUSE（3）はWindowsと共通です。専用の補助レイヤーはありません。
+Bluetooth・音量も共通のMEDIA_BT（10）を使います。Function（5）＋数字（6）で有効になり、ANDROID_NUMBERより優先されるため、Bluetooth選択が矢印で隠れません。
 
 キー操作はZMK標準のマクロ、レイヤー、mod-morphだけで構成しています。独自のsrc・動作定義・専用テストは不要です。
