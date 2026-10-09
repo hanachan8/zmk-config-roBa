@@ -4,10 +4,10 @@ parse_config:
     "&td_lang": {t: LANG2, h: "2x: LANG1"}
     "&zoom_in_wheel": "Zoom +"
     "&zoom_out_wheel": "Zoom -"
-    "&android_a": {t: A, h: Ctrl, s: "Win: Notify"}
+    "&android_a": {t: A, h: Ctrl, s: "Win:Notify"}
     "&android_d": {t: D, s: "Win: Home"}
     "&android_space": {t: Space, h: Fn, s: "Win: Lang"}
-    "&android_number_o": {t: PgUp, s: "Win: Gemini"}
+    "&android_number_o": {t: PgUp, s: "Win:Gemini"}
     "&android_up": {t: "↑", s: "Win: Max"}
     "&android_down": {t: "↓", s: "Win: Popup"}
     "&android_left": {t: "←", h: "Alt: Back", s: "Win: Split"}
