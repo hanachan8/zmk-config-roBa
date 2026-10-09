@@ -22,7 +22,7 @@ BT3（4番目の接続先）を選択するとAndroidレイヤー1が有効に�
 | Alt + ← | Cmd + Backspace | 戻る |
 | Alt + F4 | Alt + F4 | 現在のアプリを終了 |
 
-CmdはWinと同じGUI修飾キーです。左Winは数字レイヤー5も開きます。右Winは文字配置を維持します。
+CmdはWinと同じGUI修飾キーです。左Winは数字レイヤー6も開きます。右Winは文字配置を維持します。
 Win + SpaceではGUIを取り除いてCtrl + Spaceを送ります。
 
 履歴はAltを保持しながらTabで候補を切り替え、Altを離して確定します。
@@ -34,7 +34,7 @@ https://www.samsung.com/uk/support/mobile-devices/what-is-the-edge-panel-and-how
 
 ## 矢印とレイヤー
 
-- 左Winを押すと、Windows用配列と同じく数字レイヤー5＋Winが有効になります。
+- 左Winを押すと、Windows用配列と同じく数字レイヤー6＋Winが有効になります。
 - Enter長押しで数字レイヤーを開き、I/J/K/Lの位置を↑/←/↓/→として使います。
 - 例：左Win + Lの位置 → Cmd + Ctrl + →（右へ分割）。Enter長押しは不要です。
 - 右Win + Lは画面OFFです。右Win + D/Aもホーム／通知として使えます。左Win側の同じ物理位置は数字・矢印になります。
@@ -71,10 +71,10 @@ ZMK Studioで保存した配列がある場合、書き込んだソースの配�
 
 | 番号 | 名前 | 自動で有効になる条件 | 役割 |
 |---|---|---|---|
-| 10 | ANDROID_NUMBER | Android（1）＋数字（5） | I/J/K/L位置の矢印をAndroid向けに変換。Win＋矢印とAlt＋←に対応。O位置はWin保持中のみCmd＋O |
-| 11 | ANDROID_ARROW | Android（1）＋矢印（6） | 矢印レイヤー内の通常矢印に同じ変換を適用 |
-| 12 | ANDROID_MOUSE | Android（1）＋手動マウス（2） | 手動マウス内の通常矢印に同じ変換を適用。マウスボタンは既存配置を使用 |
-| 13 | ANDROID_MEDIA | Android（1）＋Bluetooth・音量（8） | 上位の矢印設定に接続先選択が隠れないよう、Bluetooth・音量操作を最優先にする |
+| 10 | ANDROID_NUMBER | Android（1）＋数字（6） | I/J/K/L位置の矢印をAndroid向けに変換。Win＋矢印とAlt＋←に対応。O位置はWin保持中のみCmd＋O |
+| 11 | ANDROID_ARROW | Android（1）＋矢印（7） | 矢印レイヤー内の通常矢印に同じ変換を適用 |
+| 12 | ANDROID_MOUSE | Android（1）＋手動マウス（3） | 手動マウス内の通常矢印に同じ変換を適用。マウスボタンは既存配置を使用 |
+| 13 | ANDROID_MEDIA | Android（1）＋Bluetooth・音量（9） | 上位の矢印設定に接続先選択が隠れないよう、Bluetooth・音量操作を最優先にする |
 
 10～12は必要な矢印と、10のO位置だけを上書きし、残りは共有レイヤーを使用します。Windows側へAndroidの変換が混ざらないように分離しています。
 

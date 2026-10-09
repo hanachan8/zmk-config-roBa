@@ -1,6 +1,6 @@
 parse_config:
   raw_binding_map:
-    "&win_layer5": {t: Win, h: Num}
+    "&win_number": {t: Win, h: Num}
     "&td_lang": {t: LANG2, h: "2x: LANG1"}
     "&zoom_in_wheel": "Zoom +"
     "&zoom_out_wheel": "Zoom -"
